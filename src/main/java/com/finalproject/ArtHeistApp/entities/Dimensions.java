@@ -16,7 +16,7 @@ public class Dimensions {
 
 	@Override
 	public String toString() {
-		return "Dimensions [in=" + in + "]";
+		return "Dimensions in =  " + in;
 	}
 	
 	
