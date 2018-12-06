@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.finalproject.ArtHeistApp.entities.Shopper;
+import com.finalproject.ArtHeistApp.repository.DummyRepo;
 import com.finalproject.ArtHeistApp.repository.ShopperRepository;
 
 
@@ -18,6 +19,9 @@ import com.finalproject.ArtHeistApp.repository.ShopperRepository;
 public class ShopperController {
 @Autowired 
 ShopperRepository s;
+
+@Autowired
+DummyRepo d;
 
 	
 	
@@ -39,6 +43,15 @@ return new ModelAndView("redirect:/heisterResults");
 	ModelAndView mv= new ModelAndView("heisterResults");
 	s.findAll();
 	mv.addObject("joblist", s.findAll());
+	return mv;	
+	}
+	
+	
+	@RequestMapping ("/TEMPORARYShopperSelection")
+	public ModelAndView dummy() {
+	ModelAndView mv= new ModelAndView("TEMPORARYShopperSelection");
+	d.findAll();
+	mv.addObject("dummyart", d.findAll());
 	return mv;	
 
 //
