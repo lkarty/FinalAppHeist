@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.finalproject.ArtHeistApp.entities.Shopper;
 import com.finalproject.ArtHeistApp.repository.ShopperRepository;
 
-import Aja.Shopper;
+
 
 
 
