@@ -14,7 +14,7 @@
 <br>
 <div style=" position:absolute; left:500px; bottom:20px">
 <p><font face="Lucida Handwriting, cursive" color="black">Shopping for a piece?</font></p>
-<a href="shopper">Enter Here</a>
+<a href="result">Enter Here</a>
 </div>
 
 <div style=" position:absolute; left:800px; bottom:20px">

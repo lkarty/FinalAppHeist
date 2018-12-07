@@ -39,7 +39,7 @@ public class ArtsyController {
 
 		ArtResults allThingsArt = artsyService.getArtFromArtsyApi(accessToken);
 		List<Artworks> artList = allThingsArt.getEmbedded().getArtworks();
-		ModelAndView mv = new ModelAndView("art", "art", artList); //artList
+		ModelAndView mv = new ModelAndView("results", "art", artList); //artList
 		//System.out.println();
 		//nextPage = allThingsArt.getLink().getNext().getRef();
 		//System.out.println(nextPage);
