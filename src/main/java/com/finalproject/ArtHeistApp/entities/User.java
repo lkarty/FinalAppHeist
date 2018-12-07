@@ -21,6 +21,14 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public User(String email, String type) {
+		super();
+		this.email = email;
+		this.type = type;
+	}
+
+
 	public User(int userid, String email, String type) {
 		super();
 		this.userid = userid;

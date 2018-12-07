@@ -11,52 +11,34 @@
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/united/bootstrap.min.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Search Collection</title>
+<title>Shopper Login</title>
 </head>
-<body>
-
 	<div class="container">
 
-
-		<h1>Enter Bag Dimensions</h1>
-		<p><em>Please format in inches using decimals</em></p>
-		<form action="search">
-			Width<input type="text" name="Width"> <input type="submit"
-				value="search"><br>
-				Height<input type="text" name="Height"> <input type="submit"
-				value="search">
-		</form>
-		<br /> <br />
-
-<%-- 		<div class="row clearfix">
-			<div class="col-md-12 column">
-				<table class="table table-bordered table-hover" id="tab_logic">
-					<thead>
-						<tr>
-							<th class="text-center">Width</th>
-							<th class="text-center">Height</th>
-						</tr>
-					</thead>
-					<tbody>
-
-
-						<c:forEach var="o" items="${orderlist}">
-							<tr id='orders'>
-								<td>${o.orderID}</td>
-								<td>${o.orderDate}</td>
-								<td>${o.shipCity}</td>
-
-							</tr>
-						</c:forEach>
-						<tr id='orders'></tr>
-					</tbody>
-				</table>
-			</div>
+		
+			<div class="row">
+		<div class="col-lg-3">
+			<h1>Welcome Shopper!</h1>
 		</div>
-
-
+		</div>
+		<div class="row"> 
+		<div class="col-lg-3">
+			<form class="mb-2 mr-2" action="result">
+			
+				<div class="form-group mx-sm-3 mb-2 ">
+					<div class="form-group">
+						<label class="mx-sm-3 mb-2" for="help">Please Enter Email: </label>
+						<input id="help" class="form-control mx-sm-3 mb-2"  type="text" name="email" required>
+						<input id="usertype" type="hidden" name="type" value="shopper">
+					</div>
+			
+					<input class="form-control btn btn-primary mx-sm-3 mb-2" type="submit" value="Login"></div>
+	
+			</form>
+		</div>
+		</div>
+				
 	</div>
- --%>
 
 
 </body>
