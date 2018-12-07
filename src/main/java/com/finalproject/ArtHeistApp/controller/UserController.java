@@ -46,12 +46,20 @@ public class UserController {
 		return mv;
 	}
 	
-	@RequestMapping("/joblist")
-	public ModelAndView heisterNew(User user) {
-		ModelAndView mv = new ModelAndView("heisterResults");
-		u.save(user);
+	
+	@RequestMapping("/heister")
+	public ModelAndView heisterLogin() {
+		ModelAndView mv = new ModelAndView("heister");
 		return mv;
 	}
+	
+//	@RequestMapping("/heisterResults")
+//	public ModelAndView heisterNew(@RequestParam("email") String email, @RequestParam("type") String type) {
+//		User user = new User(email, type);
+//		ModelAndView mv = new ModelAndView("heisterResults");
+//		u.save(user);
+//		return mv;
+//	}
 
 
 }

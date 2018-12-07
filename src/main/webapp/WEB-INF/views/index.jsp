@@ -15,14 +15,14 @@
 <br>
 <br>
 <br>
-<div style=" position:absolute; left:500px; bottom:20px">
+<div style=" position:absolute; left:500px; bottom:200px">
 <p><font face="Lucida Handwriting, cursive" color="black">Shopping for a piece?</font></p>
-<a href="result">Enter Here</a>
+<a href="shopper" class="btn btn-primary">Enter Here</a>
 </div>
 
-<div style=" position:absolute; left:800px; bottom:20px">
+<div style=" position:absolute; left:800px; bottom:200px">
 <p><font face="Lucida Handwriting, cursive" color="black">Seeking to procure a piece for a shopper?</font></p>
-<a href="heistJobList">Enter Here</a>
+<a href="heister" class="btn btn-primary">Enter Here</a>
 </div>
 
 
