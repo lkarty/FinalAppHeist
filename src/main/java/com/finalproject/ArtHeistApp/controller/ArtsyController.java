@@ -27,25 +27,25 @@ public class ArtsyController {
 
 	//String nextPage;
 
-	@RequestMapping("/")
-	public ModelAndView index() {
-		return new ModelAndView("index");
-	}
-
-	@RequestMapping("/result")
-	public ModelAndView artLists() {
-		// First we must exchange that code for an access token.
-		String accessToken = artsyService.getArtsyAccessToken();
-
-		ArtResults allThingsArt = artsyService.getArtFromArtsyApi(accessToken);
-		List<Artworks> artList = allThingsArt.getEmbedded().getArtworks();
-		ModelAndView mv = new ModelAndView("results", "art", artList); //artList
-		//System.out.println();
-		//nextPage = allThingsArt.getLink().getNext().getRef();
-		//System.out.println(nextPage);
-		// mv.addObject("nextPage", allThingsArt.getLink().getNext());
-		return mv;
-	}
+//	@RequestMapping("/")
+//	public ModelAndView index() {
+//		return new ModelAndView("index");
+//	}
+//
+//	@RequestMapping("/result")
+//	public ModelAndView artLists() {
+//		// First we must exchange that code for an access token.
+//		String accessToken = artsyService.getArtsyAccessToken();
+//
+//		ArtResults allThingsArt = artsyService.getArtFromArtsyApi(accessToken);
+//		List<Artworks> artList = allThingsArt.getEmbedded().getArtworks();
+//		ModelAndView mv = new ModelAndView("results", "art", artList); //artList
+//		//System.out.println();
+//		//nextPage = allThingsArt.getLink().getNext().getRef();
+//		//System.out.println(nextPage);
+//		// mv.addObject("nextPage", allThingsArt.getLink().getNext());
+//		return mv;
+//	}
 
 //	@RequestMapping("/love")
 //	public ModelAndView loveCalc(@RequestParam("width") Integer artw, @RequestParam("height") Integer arth) {
