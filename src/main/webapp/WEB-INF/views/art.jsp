@@ -14,6 +14,7 @@
 	<%-- <%@ include file="partials/header.jsp"%> --%>
 
 	<!-- <a class="btn btn-primary" href="/next-results">Next</a> -->
+<div class="container">
 <h1>Artworks</h1>
 
 	<table class="table">
@@ -55,5 +56,6 @@
 	</table>
 
 	<img alt="" src="">
+	</div>
 </body>
 </html>
