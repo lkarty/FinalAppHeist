@@ -5,15 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login</title>
+<title>Artworks</title>
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/sketchy/bootstrap.min.css" />
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/minty/bootstrap.min.css" />
 </head>
 <body>
 	<!-- This is an include directive and allows us to reuse other files in our pages so we don't have to duplicate code -->
 	<%-- <%@ include file="partials/header.jsp"%> --%>
 
 	<!-- <a class="btn btn-primary" href="/next-results">Next</a> -->
+<h1>Artworks</h1>
 
 	<table class="table">
 		<thead>
@@ -24,8 +25,10 @@
 				<th>Date</th>
 				<!-- <th>Location</th> -->
 				<th>Height</th>
-				<th>Width</th>			
+				<th>Width</th>
+				<th>Price</th>			
 				<th>Image</th>
+				
 			</tr>
 
 		</thead>
@@ -39,7 +42,9 @@
 					<%-- <td>${a.location}</td> --%>
 					<td>${a.dimensions.in.height }</td>
 					<td>${a.dimensions.in.width }</td>
+					<td>$$$$<br><button type="button" class="btn btn-primary">Add to Job</button></td>
 					<td><img src="${a.links.image.img}"></td>
+					
 
 				</tr>
 

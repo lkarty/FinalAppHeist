@@ -7,7 +7,7 @@
 <head>
 
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/united/bootstrap.min.css" />
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/minty/bootstrap.min.css" />
 
 <meta charset="UTF-8">
 <title>Results</title>
@@ -29,7 +29,8 @@
 				<th>Date</th>
 				<!-- <th>Location</th> -->
 				<th>Height</th>
-				<th>Width</th>			
+				<th>Width</th>	
+				<th>Job Price</th>			
 				<th>Image</th>
 			</tr>
 
@@ -44,6 +45,7 @@
 					<%-- <td>${a.location}</td> --%>
 					<td>${a.dimensions.in.height }</td>
 					<td>${a.dimensions.in.width }</td>
+					<td>$$$$$</td>
 					<td><img src="${a.links.image.img}"></td>
 
 				</tr>
