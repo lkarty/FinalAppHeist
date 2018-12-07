@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/united/bootstrap.min.css" />
+
 <meta charset="UTF-8">
 <title>The Art Heist</title>
 </head>
@@ -23,10 +26,7 @@
 </div>
 
 
-<div style=" position:absolute; left:500px; bottom:300px">
-<a href="shopperResults">TEST PAGE TO QUICKLY ACCESS SHOPPER RESULTS. TEMPORARY. TO BE REMOVED</a>
-</div>
 
-${artworks}
+
 
 </body>
