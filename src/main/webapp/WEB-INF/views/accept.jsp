@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lux/bootstrap.min.css" />
 </head>
 <body>
-
-
+<h1>Hello, Heister</h1>
+<h1>Please verify that the artwork you are heisting is correct and submit your bid</h1>
 <div class="container">
 <form action="quote">
 	Title: <input type="text" value="${t}">
