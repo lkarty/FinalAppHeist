@@ -9,13 +9,8 @@
 </head>
 <body>
 
-Your next job is to heist 
-<h1>${accepted }</h1> 
 
-${quote }
-<br>
-<br>
-<br>
+<div class="container">
 <form action="quote">
 	Title: <input type="text" value="${t}">
 	Job Lister Email: <input type="text" value="${s}">
@@ -23,9 +18,6 @@ ${quote }
 	Your Email: <input type="text" value="${h}">
 	Your Bid: $<input type="text" name="bid">
 	<input type="submit" value="Submit">
-
-
-
 </form>
 
 Would you like to <a href ="/acceptedjobssearch"> view your list of heists?</a>
@@ -34,7 +26,7 @@ Would you like to <a href ="/acceptedjobssearch"> view your list of heists?</a>
 
 
 
-
+</div>
 
 </body>
 </html>
