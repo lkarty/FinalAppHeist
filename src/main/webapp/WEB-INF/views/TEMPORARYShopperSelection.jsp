@@ -11,10 +11,21 @@
 </head>
 
 <body>
-<h2>Please select your bespoke artwork</h2>
+<h1>You have selected</h1>
 <br>
 <br>
-<table class ="table">
+
+<h1>${test }</h1>
+<br>
+<br>
+Would you like to <a href="/shopper"> add another artwork? (</a>
+(for your security, you will be prompted to re-enter your email address)
+
+<br>
+<br>
+Would you like to <a href ="/shopperlistsearch"> view your personal art repository?</a>
+(for your security, you will be prompted to re-enter your email address)
+<%-- <table class ="table">
 		<c:forEach var="d" items="${dummyart}">
 			<tr>
 			
@@ -27,6 +38,6 @@
 			</tr>
 			
 			</c:forEach>
-		</table>
+		</table> --%>
 </body>
 </html>

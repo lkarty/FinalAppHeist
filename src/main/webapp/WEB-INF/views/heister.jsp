@@ -23,7 +23,7 @@
 		</div>
 		<div class="row"> 
 		<div class="col-lg-3">
-			<form class="mb-2 mr-2" action="heister">
+			<form class="mb-2 mr-2" action="availablejobs">
 			
 				<div class="form-group mx-sm-3 mb-2 ">
 					<div class="form-group">

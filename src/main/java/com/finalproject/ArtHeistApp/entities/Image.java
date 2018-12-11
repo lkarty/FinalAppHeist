@@ -1,7 +1,5 @@
 package com.finalproject.ArtHeistApp.entities;
 
-import java.util.Arrays;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,14 +9,18 @@ public class Image {
 	private String img;
 
 	public String getImg() {
+//		String[] hrefSplit = img.split("[{}]");
+//		String newUrl = hrefSplit[0] + "small" + ".jpg";
+//		return newUrl;
 		return img;
 	}
 
 	public void setImg(String img2) {
 		String[] hrefSplit = img2.split("[{}]");
-		System.out.println(Arrays.toString(hrefSplit));
-
+//		//System.out.println(Arrays.toString(hrefSplit));
+//
 		img = hrefSplit[0] + "small" + ".jpg";
+		
 	
 	}
 

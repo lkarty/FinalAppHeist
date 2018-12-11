@@ -13,7 +13,7 @@
 <body>
 
 
-	<form action = "addshopper">
+<%-- 	<form action = "addshopper">
 			Name: <input type ="text" name="shoppername">
 					<input type="submit" value="Request">
 		</form>
@@ -30,11 +30,11 @@
 			</tr>
 			
 			</c:forEach>
-		</table>
+		</table> --%>
 		
 		 
-
-
+${quote } <br>
+${success }
 
 
 

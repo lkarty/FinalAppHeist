@@ -7,12 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name="users")
+@Table(name = "users")
 public class User {
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private int userid;
+	private Integer userid;
 	private String email;
 	private String type;
 
@@ -20,27 +20,25 @@ public class User {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+
 	public User(String email, String type) {
 		super();
 		this.email = email;
 		this.type = type;
 	}
 
-
-	public User(int userid, String email, String type) {
+	public User(Integer userid, String email, String type) {
 		super();
 		this.userid = userid;
 		this.email = email;
 		this.type = type;
 	}
 
-	public int getUserid() {
+	public Integer getUserid() {
 		return userid;
 	}
 
-	public void setUserid(int userid) {
+	public void setUserid(Integer userid) {
 		this.userid = userid;
 	}
 
@@ -59,5 +57,12 @@ public class User {
 	public void setType(String type) {
 		this.type = type;
 	}
-		
+
+	@Override
+	public String toString() {
+		return "User [userid=" + userid + ", email=" + email + ", type=" + type + "]";
+	}
+	
+	
+
 }

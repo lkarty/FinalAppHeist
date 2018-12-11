@@ -43,14 +43,14 @@ public class ArtsyService {
 	 * details.
 	 */
 	public ArtResults getArtFromArtsyApi(String accessToken) {
-
+		
 		RestTemplate rest = new RestTemplate();
 		// Add header info needed by ArtsyAPI
 		HttpHeaders header = new HttpHeaders();
 		header.add("X-Xapp-Token", accessToken);
-		String uri = "https://api.artsy.net/api/artworks?size=150"; // can specify how many a user wants to search for :)
+		String uri = "https://api.artsy.net/api/artworks?size=10"; // can specify how many a user wants to search for :)
 		ResponseEntity<ArtResults> response = rest.exchange(uri, HttpMethod.GET, new HttpEntity<String>(header), ArtResults.class);
-		System.out.println(response.getBody());
+		System.out.println("test: " + response.getBody());
 		return response.getBody();
 	}
 

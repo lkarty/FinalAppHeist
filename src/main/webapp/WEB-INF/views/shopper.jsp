@@ -23,16 +23,17 @@
 		</div>
 		<div class="row"> 
 		<div class="col-lg-3">
-			<form class="mb-2 mr-2" action="result">
+			<form class="mb-2 mr-2" action="resultz">
 			
-				<div class="form-group mx-sm-3 mb-2 ">
-					<div class="form-group">
-						<label class="mx-sm-3 mb-2" for="help">Please Enter Email: </label>
-						<input id="help" class="form-control mx-sm-3 mb-2"  type="text" name="email" required>
-						<input id="usertype" type="hidden" name="type" value="shopper">
-					</div>
+				<div>
+					<div >
+						<!-- <label class="mx-sm-3 mb-2" for="help">Please Enter Email: </label> -->
+						Please Enter Email:
+						<input id="help"  type="text" name="email" required>
+						<input type="hidden" name="utype" value="shopper">
+					
 			
-					<input class="form-control btn btn-primary mx-sm-3 mb-2" type="submit" value="Login"></div>
+					<input type="submit" value="Login"></div></div>
 	
 			</form>
 		</div>

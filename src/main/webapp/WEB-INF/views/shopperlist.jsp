@@ -10,20 +10,33 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/sketchy/bootstrap.min.css" />
 </head>
 <body>
-<form action= "shopperlistsearch">
-Enter your email address to view your personal art repository: <input name= "shoppername">
-<input type="submit" value="View Art Repository">
-</form>
 
+<h1>My Jobs</h1>
 <table class ="table">
-		<c:forEach var="p" items="${shopper-list}">
+		<c:forEach var="p" items="${shopperlist}">
 			<tr>
+			
 			<td>${p.title }</td>
+			<td><img src="${p.image}"></td>
 			
 						</tr>
 			
 			</c:forEach>
 		</table>
 
+<h1>Bids</h1>
+<table class ="table">
+		<c:forEach var="p" items="${bidslist}">
+			<tr>
+			
+			<td>${p.title }</td>
+			<td>${p.price }</td>
+			<td>${p.heisteremail }</td>
+			<%-- <td><img src="${p.image}"></td> --%>
+			
+						</tr>
+			
+			</c:forEach>
+		</table>
 </body>
 </html>

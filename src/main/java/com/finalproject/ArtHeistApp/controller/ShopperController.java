@@ -10,49 +10,42 @@ import com.finalproject.ArtHeistApp.entities.Shopper;
 import com.finalproject.ArtHeistApp.repository.DummyRepo;
 import com.finalproject.ArtHeistApp.repository.ShopperRepository;
 
-
-
-
-
-
-@Controller
+//@Controller
 public class ShopperController {
-@Autowired 
-ShopperRepository s;
+//	@Autowired
+//	ShopperRepository s;
+//
+//	@Autowired
+//	DummyRepo d;
 
-@Autowired
-DummyRepo d;
-
-	
-	
-@RequestMapping("/addshopper")
-public ModelAndView addNewShopper(@RequestParam("shoppername") String shoppername) {
-Shopper p1= new Shopper(shoppername);
-s.save(p1);
-return new ModelAndView("redirect:/heisterResults");
-}
+//	@RequestMapping("/addshopper")
+//	public ModelAndView addNewShopper(@RequestParam("shoppername") String shoppername) {
+//		Shopper p1 = new Shopper(shoppername);
+//		s.save(p1);
+//		return new ModelAndView("redirect:/heisterResults");
+//	}
 
 //@RequestMapping ("/heisterResults")
 //public ModelAndView heisterResults() {
 //	return new ModelAndView ("heisterResults", "joblist", "hello world");
 //	
 //}
-	
-	@RequestMapping ("/heisterResults")
-	public ModelAndView index() {
-	ModelAndView mv= new ModelAndView("heisterResults");
-	s.findAll();
-	mv.addObject("joblist", s.findAll());
-	return mv;	
-	}
-	
-	
-	@RequestMapping ("/TEMPORARYShopperSelection")
-	public ModelAndView dummy() {
-	ModelAndView mv= new ModelAndView("TEMPORARYShopperSelection");
-	d.findAll();
-	mv.addObject("dummyart", d.findAll());
-	return mv;	
+
+//	@RequestMapping("/heisterResults")
+//	public ModelAndView index() {
+//		ModelAndView mv = new ModelAndView("heisterResults");
+//		s.findAll();
+//		mv.addObject("joblist", s.findAll());
+//		return mv;
+//	}
+//
+//	@RequestMapping("/TEMPORARYShopperSelection")
+//	public ModelAndView dummy() {
+//		ModelAndView mv = new ModelAndView("TEMPORARYShopperSelection");
+//		d.findAll();
+//		mv.addObject("dummyart", d.findAll());
+//		return mv;
+//	}
 
 //
 //			@RequestMapping ("/")
@@ -63,5 +56,5 @@ return new ModelAndView("redirect:/heisterResults");
 //			mv.addObject("orderslist", repo.findAll());
 //					return mv;
 
-}
+	
 }

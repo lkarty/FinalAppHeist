@@ -14,48 +14,53 @@
 	<%-- <%@ include file="partials/header.jsp"%> --%>
 
 	<!-- <a class="btn btn-primary" href="/next-results">Next</a> -->
-<div class="container">
-<h1>Artworks</h1>
+	<div class="container">
+		<h1>Artworks</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<!-- <th>ID</th> -->
-				<th>Title</th>
-				<th>Medium</th>
-				<th>Date</th>
-				<!-- <th>Location</th> -->
-				<th>Height</th>
-				<th>Width</th>
-				<th>Price</th>			
-				<th>Image</th>
-				
-			</tr>
-
-		</thead>
-		<c:forEach var="a" items="${art }">
-			<tbody>
+		<table class="table">
+			<thead>
 				<tr>
-					<%-- <td>${a.id }</td> --%>
-					<td>${a.title }</td>
-					<td>${a.medium }</td>
-					<td>${a.date }</td>
-					<%-- <td>${a.location}</td> --%>
-					<td>${a.dimensions.in.height }</td>
-					<td>${a.dimensions.in.width }</td>
-					<td>$$$$<br><button type="button" class="btn btn-primary">Add to Job</button></td>
-					<td><img src="${a.links.image.img}"></td>
-					
+					<!-- <th>ID</th> -->
+					<th>Title</th>
+					<th>Medium</th>
+					<th>Date</th>
+					<!-- <th>Location</th> -->
+					<th>Height</th>
+					<th>Width</th>
+					<th>Price</th>
+					<th>Image</th>
 
 				</tr>
 
+			</thead>
+			<tbody>
+				<c:forEach var="a" items="${art }" varStatus="count">
+
+					<tr>
+						<%-- <td>${a.id }</td> --%>
+						<td>${a.title }</td>
+						<td>${a.medium }</td>
+						<td>${a.date }</td>
+						<%-- <td>${a.location}</td> --%>
+						<td>${a.dimensions.in.height }</td>
+						<td>${a.dimensions.in.width }</td>
+						<td>$$$$<br>
+						<a
+							href="add-job?title=${a.title }&medium=${a.medium }&date=${a.date }&i=${count.index}"
+							class="btn btn-primary">Add to Job</a></td>
+						<td><img src="${a.links.image.img}"></td>
+
+
+					</tr>
+
+
+
+
+				</c:forEach>
 			</tbody>
+		</table>
 
-
-		</c:forEach>
-	</table>
-
-	<img alt="" src="">
+		<!-- <img alt="" src=""> -->
 	</div>
 </body>
 </html>
