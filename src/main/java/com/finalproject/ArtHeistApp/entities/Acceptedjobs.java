@@ -17,7 +17,16 @@ public class Acceptedjobs {
 	private String shoppername;
 	private Integer price;
 	private String heisteremail;
+	private String image;
 	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	public Acceptedjobs() {
 		// TODO Auto-generated constructor stub
 	}
@@ -37,6 +46,14 @@ public class Acceptedjobs {
 		this.shoppername = shoppername;
 		this.price = price;
 		this.heisteremail = heisteremail;
+		
+	}
+
+	
+	public Acceptedjobs(String title, String image) {
+		super();
+		this.title = title;
+		this.image = image;
 	}
 
 	public Integer getId() {

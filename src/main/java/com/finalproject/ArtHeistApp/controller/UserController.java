@@ -83,7 +83,7 @@ public class UserController {
 		System.out.println();
 		s.save(shops);
 
-		ModelAndView mv = new ModelAndView("TEMPORARYShopperSelection", "test",
+		ModelAndView mv = new ModelAndView("ShopperSelection", "test",
 				t + ", a stunning   " + m + ", dating back to  " + d);
 
 		return mv;
@@ -128,25 +128,30 @@ public class UserController {
 			@RequestParam("price") int p) {
 		// at some point you may want to rename this pojo to job
 		heisterJob = new Acceptedjobs(t, s, p, user.getEmail());
-		
 
-		ModelAndView mv = new ModelAndView("accept", "accepted", t + " , for   " + s + ". Your bounty is  " + p
-				+ " (USD) payable in BitCoin or small, unmarked bills. Be careful heister and remember ");
+		ModelAndView mv = new ModelAndView("accept");
+
 		// mv.addObject("quote", list.get(rIndex));
 		mv.addObject("t", t);
 		mv.addObject("s", s);
 		mv.addObject("p", p);
 		mv.addObject("h", user.getEmail());
-		//mv.addObject("b", b);
+		// mv.addObject("b", b);
 		return mv;
 
 	}
 
 	@RequestMapping("/quote")
-	public ModelAndView quote(@RequestParam("bid") int bid) {
+	public ModelAndView acceptJob(@RequestParam("title") String t, @RequestParam("shoppername") String s,
+			@RequestParam("bid") Integer bid) {
+		// at some point you may want to rename this pojo to job
+		//Acceptedjobs jobs = new Acceptedjobs(0, t, p, 80, user.getEmail());
+		heisterJob.setPrice(bid);
+		aj.save(heisterJob);
+
 		ArrayList<String> list = new ArrayList<>();
 		list.add(
-				"Stealing is always wrong, but stealing paintings in an elaborate way is a little like stealing bread to feed your family. It's stealing bread to feed the world's daydreams about becoming an art thief.\r\n"
+				" Stealing is always wrong, but stealing paintings in an elaborate way is a little like stealing bread to feed your family. It's stealing bread to feed the world's daydreams about becoming an art thief.\r\n "
 						+ "\r\n" + "Ben Mathis-Lilley");
 		list.add("\r\n"
 				+ "He who steals a little steals with the same wish as he who steals much, but with less power.\r\n"
@@ -162,12 +167,50 @@ public class UserController {
 						+ "\r\n" + "Proverb");
 		Random rand = new Random();
 		int rIndex = rand.nextInt(list.size() - 1);
-		ModelAndView mv = new ModelAndView("heisterResults", "quote", list.get(rIndex));
-		mv.addObject("success", "Success!");
-		heisterJob.setPrice(bid);
-		aj.save(heisterJob);
-		return mv; 
+
+		ModelAndView mv = new ModelAndView("heisterResults", "success", t + " , for   " + s + ". Your bounty is  " + bid
+				+ " (USD) payable in BitCoin or small, unmarked bills. Be careful heister and remember ");
+		mv.addObject("quote", list.get(rIndex));
+		return mv;
+
 	}
+
+//	@RequestMapping("/quote")
+//	public ModelAndView quote(@RequestParam("bid") int bid, @RequestParam("title") String t, @RequestParam("shoppername") String s,
+//			@RequestParam("price") int p) {
+//		
+//	
+//		ArrayList<String> list = new ArrayList<>();
+//		
+//		
+//		list.add(
+//				"Stealing is always wrong, but stealing paintings in an elaborate way is a little like stealing bread to feed your family. It's stealing bread to feed the world's daydreams about becoming an art thief.\r\n"
+//						+ "\r\n" + "Ben Mathis-Lilley");
+//		list.add("\r\n"
+//				+ "He who steals a little steals with the same wish as he who steals much, but with less power.\r\n"
+//				+ "\r\n" + "Plato");
+//		list.add("\r\n" + "Stealing things is a glorious occupations, particularly in the art world.     \r\n" + "\r\n"
+//				+ "Malcolm McLaren");
+//		list.add("Stealing isn't so easy, often it's hard work, otherwise we'd all be doing it.     \r\n" + "\r\n"
+//				+ "Elfriede Jelinek");
+//		list.add("Steal a little and they'll put you in jail, steal a lot and they'll make you king.\r\n" + "\r\n"
+//				+ "Bob Dylan");
+//		list.add(
+//				"If you steal something small you are a petty thief, but if you steal millions you are a gentleman of society.\r\n"
+//						+ "\r\n" + "Proverb");
+//		
+//		//ModelAndView mv = new ModelAndView("accept", "accepted", );
+//		Random rand = new Random();
+//		int rIndex = rand.nextInt(list.size() - 1);
+//		ModelAndView mv = new ModelAndView("heisterResults", "quote", t + " , for   " + s + ". Your bounty is  " + bid
+//			+ " (USD) payable in BitCoin or small, unmarked bills. Be careful heister and remember ");
+//		//mv.addObject("success", "Success!");
+//		heisterJob.setPrice(bid);
+//		aj.save(heisterJob);
+//		
+//		mv.addObject("quote", list.get(rIndex));
+//		return mv; 
+//	}
 	//
 	// @RequestMapping("/heisterResults")
 	// public ModelAndView heisterNew(@RequestParam("email") String email,
@@ -178,10 +221,10 @@ public class UserController {
 	// return mv;
 	// }
 
-	@RequestMapping("/acceptedjobssearch")
+	@RequestMapping("/acceptedjobs")
 	public ModelAndView acceptedlist(String heisteremail) {
-		ModelAndView mv = new ModelAndView("acceptedjobsearch");
-		mv.addObject("accepted-jobs", aj.findByHeisteremail(user.getEmail()));
+		ModelAndView mv = new ModelAndView("acceptedjobs");
+		mv.addObject("acceptedjobs", aj.findByHeisteremail(user.getEmail()));
 		return mv;
 	}
 

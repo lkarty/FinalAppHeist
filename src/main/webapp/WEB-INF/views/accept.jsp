@@ -12,17 +12,15 @@
 <h1>Please verify that the artwork you are heisting is correct and submit your bid</h1>
 <div class="container">
 <form action="quote">
-	Title: <input type="text" value="${t}">
-	Job Lister Email: <input type="text" value="${s}">
+	Title: <input type="text" value= "${t }" name="title">
+	Job Lister Email: <input type="text" value="${s}" name="shoppername">
 	Original Offer Price: $<input type="text" value="${p}">
 	Your Email: <input type="text" value="${h}">
 	Your Bid: $<input type="text" name="bid">
 	<input type="submit" value="Submit">
 </form>
 
-Would you like to <a href ="/acceptedjobssearch"> view your list of heists?</a>
-<br>
-(for your security, you will be prompted to re-enter your email address)
+
 
 
 

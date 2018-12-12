@@ -32,7 +32,7 @@
 					<td>${v.title }</td>
 					<td>${v.price}</td>
 					<td>${v.shoppername }</td>
-					<td><a href="accept?title=${v.title }&price=${v.price }&shoppername=${v.shoppername}" class="btn btn-primary">Accept Job</a></td>
+					<td><a href="accept?title=${v.title }&price=${v.price }&shoppername=${v.shoppername}" class="btn btn-primary">Bid</a></td>
 					
 					
 
