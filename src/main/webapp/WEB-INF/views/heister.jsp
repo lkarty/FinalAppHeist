@@ -28,7 +28,7 @@
 				<div class="form-group mx-sm-3 mb-2 ">
 					<div class="form-group">
 						<label class="mx-sm-3 mb-2" for="help">Please Enter Email: </label>
-						<input id="help" class="form-control mx-sm-3 mb-2"  type="text" name="email" required>
+						<input id="help" class="form-control mx-sm-3 mb-2"  type="email" name="email" required>
 						<input id="usertype" type="hidden" name="type" value="heister">
 					</div>
 			

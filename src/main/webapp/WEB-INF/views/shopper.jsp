@@ -29,7 +29,7 @@
 					<div >
 						<!-- <label class="mx-sm-3 mb-2" for="help">Please Enter Email: </label> -->
 						Please Enter Email:
-						<input id="help"  type="text" name="email" required>
+						<input id="help"  type="email" name="email" required>
 						<input type="hidden" name="utype" value="shopper">
 					
 			
