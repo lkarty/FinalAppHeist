@@ -1,25 +1,20 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
-<head>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lux/bootstrap.min.css" />
 <link
 	href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;subset=latin-ext"
 	rel="stylesheet">
-
-
 <link rel="stylesheet" href="style.css">
 
 
 <meta charset="UTF-8">
-<title>Cart</title>
+<title>ERROR</title>
 </head>
-<body>
+<body class="error">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="/">The Art Heist</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -43,18 +38,15 @@
 			</form>
 		</div>
 	</nav>
-
 	<div class="container">
-		<h1>You have selected</h1>
-		
-		<div class="alert alert-dismissible alert-warning"><p>${test }</p></div>
-		<p>Would you like to <a href="/shopper"> add
-			another artwork? </a> (for your security, you will be prompted to
-		re-enter your email address) <br> <br> Would you like to <a
-			href="/shopperlistsearch"> view your personal art repository?</a>
-		(for your security, you will be prompted to re-enter your email
-		address)</p>
 
-	</div>
+
+	<div style="position: absolute; left: 500px; bottom: 200px">
+		<p>
+			<font face="Lucida Handwriting, cursive" color="black">Whatever you're looking for, this ain't it</font>
+		</p>
+		<a href="index" class="btn btn-primary">Go home</a>
+	</div></div>
+
 </body>
 </html>

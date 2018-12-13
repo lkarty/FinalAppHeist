@@ -1,0 +1,39 @@
+.script {
+	font-family: 'Dancing Script', cursive;
+	text-transform: capitalize;
+	font-size: 1.5em;
+}
+
+.rowm {
+	margin: 2em;
+}
+
+.home {
+	background-image: url("background.jpg");
+}
+
+.error {background-image: url("http://www.locuststreetart.org/wp-content/uploads/blank-canvas.jpg")}
+
+h1 {
+	margin-top: 2em;
+}
+
+
+input {
+	background-color: #eceeef;
+	height: calc(2.8125rem + 0);
+	padding: 0.75rem 2rem;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	color: #55595c;
+	background-clip: padding-box;
+	border: 1 solid #ced4da;
+	border-radius: 0;
+	-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow
+		0.15s ease-in-out;
+	transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s
+		ease-in-out;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+		-webkit-box-shadow 0.15s ease-in-out;
+}

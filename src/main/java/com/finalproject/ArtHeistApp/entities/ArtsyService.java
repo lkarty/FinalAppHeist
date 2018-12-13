@@ -19,8 +19,7 @@ public class ArtsyService {
 	private String clientSecret;
 
 	/**
-	 * Make an HTTP request to Github's server. Get an access token using the
-	 * provided code.
+	 * Make an HTTP request to server. 
 	 */
 	public String getArtsyAccessToken() {
 		// We'll talk more about rest template in the coming days.
@@ -39,8 +38,7 @@ public class ArtsyService {
 	}
 
 	/**
-	 * Make an HTTP request to Artsy's server. Use the access token to get the user
-	 * details.
+	 * Make an HTTP request to Artsy's server.
 	 */
 	public ArtResults getArtFromArtsyApi(String accessToken) {
 		
@@ -48,7 +46,7 @@ public class ArtsyService {
 		// Add header info needed by ArtsyAPI
 		HttpHeaders header = new HttpHeaders();
 		header.add("X-Xapp-Token", accessToken);
-		String uri = "https://api.artsy.net/api/artworks?size=10"; // can specify how many a user wants to search for :)
+		String uri = "https://api.artsy.net/api/artworks?size=150"; // can specify how many a user wants to search for :)
 		ResponseEntity<ArtResults> response = rest.exchange(uri, HttpMethod.GET, new HttpEntity<String>(header), ArtResults.class);
 		System.out.println("test: " + response.getBody());
 		return response.getBody();

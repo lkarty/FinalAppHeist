@@ -9,6 +9,8 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/minty/bootstrap.min.css" />
 
+<link rel="stylesheet" href="style.css">
+
 <meta charset="UTF-8">
 <title>Results</title>
 </head>

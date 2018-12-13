@@ -4,37 +4,73 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/united/bootstrap.min.css" />
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lux/bootstrap.min.css" />
+<link rel="stylesheet" href="style.css">
 
 <meta charset="UTF-8">
 <title>The Art Heist</title>
 </head>
-<body
-	background="https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_675,w_1200,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1492801731/articles/2012/10/17/kunsthal-art-heist-has-many-wondering-if-it-is-an-inside-job/nadeau-kunstha-theft-tease-embed_b1alyu">
-	<h1>The Art Heist</h1>
-	<p>
-		<font face="Lucida Handwriting, cursive" color="black">Alternate
-			Art Procurement for the discerning connoisseur</font>
-	</p>
-	<br>
-	<br>
-	<br>
-	<div style="position: absolute; left: 500px; bottom: 200px">
-		<p>
-			<font face="Lucida Handwriting, cursive" color="black">Shopping
-				for a piece?</font>
-		</p>
-		<a href="shopper" class="btn btn-primary">Enter Here</a>
-	</div>
+<body class="home">
 
-	<div style="position: absolute; left: 800px; bottom: 200px">
-		<p>
-			<font face="Lucida Handwriting, cursive" color="black">Seeking
-				to procure a piece for a shopper?</font>
-		</p>
-		<a href="heister" class="btn btn-primary">Enter Here</a>
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="/">The Art Heist</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarColor01" aria-controls="navbarColor01"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
+		<div class="collapse navbar-collapse" id="navbarColor01">
+			<ul class="navbar-nav mr-auto">
+				
+				<li class="nav-item"><a class="nav-link" href="shopper">Shopper</a></li>
+				<li class="nav-item"><a class="nav-link" href="heister">Curator</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="about">About</a></li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<div class="script">Alternate Art Procurement for the
+					discerning connoisseur</div>
+
+			</form>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<div class="row rowm">
+			<div class="col col-lg-5"></div>
+			<div class="col-sm-3 .col-md-offset-6">
+
+				<div class="card text-white bg-primary"
+					style="max-width: 20rem;">
+					<div class="card-header script" >Shopping for a piece?</div>
+					<div class="card-body">
+						<p class="card-text"><a href="shopper" class="btn btn-secondary">Enter Here</a></p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-sm-4">
+			
+							<div class="card text-white bg-primary"
+					style="max-width: 20rem;">
+					<div class="card-header script">Seeking to bid on a job?</div>
+					<div class="card-body">
+						<p class="card-text"><a href="heister" class="btn btn-secondary">Enter Here</a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
 
 
 
